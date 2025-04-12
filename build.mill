@@ -6,7 +6,7 @@ import mill.contrib.sonatypecentral.SonatypeCentralPublishModule
 object foo extends SonatypeCentralPublishModule {
   //def scalaVersion = "2.13.8"
   def scalaVersion = "3.6.4"
-  def publishVersion = "0.0.1"
+  def publishVersion = "0.0.2"
 
   def pomSettings = PomSettings(
     description = "Hello",
