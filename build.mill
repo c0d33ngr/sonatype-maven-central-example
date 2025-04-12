@@ -1,3 +1,5 @@
+import mill._, scalalib._, publish._
+
 import $ivy.`com.lihaoyi::mill-contrib-sonatypecentral:`
 import mill.contrib.sonatypecentral.SonatypeCentralPublishModule
 
