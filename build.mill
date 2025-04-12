@@ -1,0 +1,17 @@
+import $ivy.`com.lihaoyi::mill-contrib-sonatypecentral:`
+import mill.contrib.sonatypecentral.SonatypeCentralPublishModule
+
+object Foo extends SonatypeCentralPublishModule {
+  //def scalaVersion = "2.13.8"
+  def scalaVersion = "3.6.4"
+  def publishVersion = "0.0.1"
+
+  def pomSettings = PomSettings(
+    description = "Hello",
+    organization = "com.c0d33ngr",
+    url = "https://github.com/c0d33ngr/example",
+    licenses = Seq(License.MIT),
+    versionControl = VersionControl.github("c0d33ngr", "example"),
+    developers = Seq(Developer("c0d33ngr", "Jeffrey Whewhetu", "https://c0d33ngr.github.io")),
+  )
+}
