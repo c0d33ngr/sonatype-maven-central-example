@@ -3,7 +3,7 @@ import mill._, scalalib._, publish._
 import $ivy.`com.lihaoyi::mill-contrib-sonatypecentral:`
 import mill.contrib.sonatypecentral.SonatypeCentralPublishModule
 
-object Foo extends SonatypeCentralPublishModule {
+object foo extends SonatypeCentralPublishModule {
   //def scalaVersion = "2.13.8"
   def scalaVersion = "3.6.4"
   def publishVersion = "0.0.1"
