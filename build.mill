@@ -10,7 +10,7 @@ object foo extends SonatypeCentralPublishModule {
 
   def pomSettings = PomSettings(
     description = "Hello",
-    organization = "com.c0d33ngr",
+    organization = "io.github.c0d33ngr",
     url = "https://github.com/c0d33ngr/example",
     licenses = Seq(License.MIT),
     versionControl = VersionControl.github("c0d33ngr", "example"),
