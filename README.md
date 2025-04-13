@@ -52,9 +52,20 @@ gpg --keyserver  keyserver.ubuntu.com --recv-keys longIDHere
 ./mill -i foo.publishSonatypeCentral
 ```
 
-### 6. Publish to Sonatype Maven Central()
+### 6. Publish to Sonatype Maven Central(Several modules publish at once)
 
 ```bash
+mill -i \
+mill.contrib.sonatypecentral.SonatypeCentralPublishModule/publishAll \
+--username myusername \
+--password mypassword \
+--gpgArgs --passphrase=$MILL_PGP_PASSPHRASE,--no-tty,--pinentry-mode,loopback,--batch,--yes,-a,-b \
+--publishArtifacts __.publishArtifacts \
+--readTimeout  36000 \
+--awaitTimeout 36000 \
+--connectTimeout 36000 \
+--shouldRelease false \
+--bundleName io.github.c0d33ngr-foo:0.0.3
 ```
 
 ![screenshot_one](Screenshot%20from%202025-04-13%2009-25-29.png)
