@@ -68,9 +68,10 @@ mill.contrib.sonatypecentral.SonatypeCentralPublishModule/publishAll \
 --bundleName io.github.c0d33ngr-foo:0.0.3
 ```
 
-![screenshot_one](Screenshot%20from%202025-04-13%2009-25-29.png)
+![screenshoot_one](Screenshot%20from%202025-04-13%2008-36-53.png)
 
-![screenshoot_two](Screenshot%20from%202025-04-13%2008-36-53.png)
+![screenshot_two](Screenshot%20from%202025-04-13%2009-25-29.png)
+
 
 
 Note: This was done using `sonatypecentral contrib plugin` from `Mill` which might not be a plugin in the future in Mill ecosystem
