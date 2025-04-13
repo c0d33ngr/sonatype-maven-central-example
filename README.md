@@ -52,5 +52,14 @@ gpg --keyserver  keyserver.ubuntu.com --recv-keys longIDHere
 ./mill -i foo.publishSonatypeCentral
 ```
 
+### 6. Publish to Sonatype Maven Central()
+
+```bash
+```
+
+![screenshot_one](Screenshot%20from%202025-04-13%2009-25-29.png)
+
+![screenshoot_two](Screenshot%20from%202025-04-13%2008-36-53.png)
+
 
 Note: This was done using `sonatypecentral contrib plugin` from `Mill` which might not be a plugin in the future in Mill ecosystem
