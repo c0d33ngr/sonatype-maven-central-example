@@ -5,7 +5,7 @@ A repo to test publishing to Sonatype Maven Central Repository
 
 Run the following commands in your terminal with their correct values.
 
-1. Generate Key pair or make use of already existing key pair if any
+### 1. Generate Key pair or make use of already existing key pair if any
 
 The command below generate new one using `GnuPG` and follow the prompt. Install it if not found in your system
 
@@ -20,7 +20,7 @@ export MILL_SONATYPE_USERNAME=PutUserTokenHere
 export MILL_SONATYPE_PASSWORD=PutTokenKeyValueHere
 ```
 
-3.
+3. This command exports your PGP secret key in Base64 format
 
 ```bash
 export MILL_PGP_SECRET_BASE64=PutKeyHere
