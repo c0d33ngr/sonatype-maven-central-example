@@ -20,7 +20,33 @@ export MILL_SONATYPE_USERNAME=PutUserTokenHere
 export MILL_SONATYPE_PASSWORD=PutTokenKeyValueHere
 ```
 
-### 3. This command exports your PGP secret key in Base64 format
+### 3. Encode PGP key to base-64 encoding
+
+The base-64 encoded PGP key, which can be encoded in the following way for each OS:
+
+```bash
+# MacOS or FreeBSD
+gpg --export-secret-key -a $LONG_ID | base64
+```
+
+```bash
+# Ubuntu (assuming GNU base64)
+gpg --export-secret-key -a $LONG_ID | base64 -w0
+```
+
+```bash
+# Arch
+gpg --export-secret-key -a $LONG_ID | base64 | sed -z 's;\n;;g'
+```
+
+```bash
+# Windows
+gpg --export-secret-key -a %LONG_ID% | openssl base64
+```
+
+### 4. Set value of MILL_PGP_SECRET_BASE64 and it's Passphrase if any
+
+This command exports your PGP secret key in Base64 format
 
 ```bash
 export MILL_PGP_SECRET_BASE64=PutKeyHere
@@ -32,7 +58,7 @@ The passphrase associated with your PGP key, if any
 export MILL_PGP_PASSPHRASE=PutPassphraseHere
 ```
 
-### 4. Send your public key to where Sonatype Maven Central can use to verify
+### 5. Send your public key to where Sonatype Maven Central can use to verify
 
 This command sends your public key
 
@@ -46,13 +72,13 @@ This command checks the server to confirm it's sent. You should see info about t
 gpg --keyserver  keyserver.ubuntu.com --recv-keys longIDHere
 ```
 
-### 5. Publish to Sonatype Maven Central (Individual module `foo`)
+### 6. Publish to Sonatype Maven Central (Individual module `foo`)
 
 ```bash
 ./mill -i foo.publishSonatypeCentral
 ```
 
-### 6. Publish to Sonatype Maven Central(Several modules publish at once)
+### 7. Publish to Sonatype Maven Central(Several modules publish at once)
 
 ```bash
 mill -i \
